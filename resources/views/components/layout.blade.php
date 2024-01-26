@@ -11,6 +11,10 @@
 
 </head>
 <body>
-    {{$slot}}
+    
+    {{-- Here, the content will be rendered --}}
+    @yield('content')
+    {{-- {{$slot}} --}}
+
 </body>
 </html>

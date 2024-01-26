@@ -16,19 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index'])->name('home');
 
 
 Route::get('/products/{slug}', [ProductController::class, 'show']);
 
 // routes/web.php
 
-
-Route::group(['prefix' => 'cart'], function () {
-    Route::get('/', [CartController::class, 'viewCart'])->name('cart.view');
-    Route::post('/add/{product}', [CartController::class, 'addToCart'])->name('cart.add');
-    Route::patch('/update/{product}', [CartController::class, 'updateCart'])->name('cart.update');
-    Route::delete('/remove/{product}', [CartController::class, 'removeFromCart'])->name('cart.remove');
-});
-
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
 
