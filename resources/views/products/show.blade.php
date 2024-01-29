@@ -1,6 +1,7 @@
 
-    @extends('components.layout')
-    @section('content')
+@extends('components.layout')
+@section('content')
+
         <div class="bg-gray-100 dark:bg-gray-800 py-8">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row -mx-4">
@@ -11,7 +12,7 @@
                         <div class="flex -mx-2 mb-4">
                             <div class="w-1/2 px-2">
                                 <a href="/">
-                                    <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Add to Cart</button>
+                                    <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-600 dark:hover:bg-gray-700">Add to Cart</button>
                                 </a>
                             </div>
                             <div class="w-1/2 px-2">
@@ -68,11 +69,9 @@
             </div>
         </div>
 
-        <form action="{{ route('cart.add', ['product' => $product->id]) }}" method="post">
-            @csrf
-            <button type="submit">Add to Cart</button>
-        </form>
-    @endsection
+        
+
+@endsection
     
 
     
