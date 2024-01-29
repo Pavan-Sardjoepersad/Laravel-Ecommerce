@@ -47,10 +47,18 @@
                             @auth
                                 <div class="flex items-center gap-4">
                                     <div class="sm:flex sm:gap-4">
-                                        <span class="inline-block rounded border border-gray-900 bg-gray-900 px-10 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-gray-900 focus:outline-none focus:ring active:text-gray-900"
+                                        <span class="inline-block rounded border border-gray-200 bg-gray-200 px-10 py-2 text-sm font-medium text-black"
                                             >
                                             Welcome, {{auth()->user()->name}}
-                                    </span>
+                                        </span>
+
+                                        <form action="/logout" method="POST">
+                                            @csrf
+                                            <button class="inline-block px-10 py-2 text-sm font-medium text-blue-500"
+                                                type="submit" 
+                                                href="/logout">Log Out
+                                            </button>
+                                        </form>
                                         
                                     </div>
                                 </div>
