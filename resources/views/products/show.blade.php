@@ -2,6 +2,26 @@
 @extends('components.layout')
 @section('content')
 
+{{-- Flash message when adding to cart --}}
+    @if (session()->has('added'))
+    
+        <div 
+            x-data="{show:true}"
+            x-init="setTimeout(() => show = false, 4000)"
+            x-show = "show" 
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            class=" bg-blue-100 border border-blue-400 text-blue-700 px-2 py-1 rounded  text-center" role="alert">
+            <strong class="font-bold">Success!</strong>
+            <span class="block sm:inline">{{session('added')}}</span>
+        </div>
+  
+    @endif
+
         <div class="bg-white dark:bg-gray-800 py-8">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row -mx-4">
@@ -11,13 +31,21 @@
                         </div>
                         <div class="flex -mx-2 mb-4">
                             <div class="w-1/2 px-2">
-                                <a href="/">
-                                    <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-600 dark:hover:bg-gray-700">Add to Cart</button>
+                                <a href="{{route('add.to.cart', $product->id)}}">
+                                    <button class="
+                                            w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-600 
+                                            dark:hover:bg-gray-700">
+                                            Add to Cart
+                                    </button>
                                 </a>
                             </div>
                             <div class="w-1/2 px-2">
                                 <a href="/">
-                                    <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">Back to Products</button>
+                                    <button class="
+                                            w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold 
+                                            hover:bg-gray-300 dark:hover:bg-gray-600">
+                                            Back to Products
+                                    </button>
                                 </a>
                             </div>
                         </div>

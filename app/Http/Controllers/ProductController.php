@@ -16,4 +16,27 @@ class ProductController extends Controller
         $product = Product::where('slug', $slug)->firstOrFail();
         return view('products.show', ['product' => $product]);
     }
+
+    public function addToCart($id){
+        $product = Product::findOrFail($id);
+        $cart = session()->get('cart', []);
+
+        if (isset($cart[$id])) {
+            $cart[$id]['quantity']++;
+        }
+        else{
+            $cart[$id] = [
+                'name' => $product->name,
+                'quantity' => 1,
+                'price' => $product->price,
+                'slug' => $product->slug
+            ];
+        }
+
+        // dd(session('cart'));
+        session()->put('cart', $cart);
+        return redirect()->back()->with('added', 'Product added to the cart');
+
+    }
+
 }
