@@ -33,3 +33,5 @@ Route::post('/login', [SessionsController::class, 'store'])->middleware('guest')
 Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
 Route::get('/products/{slug}/cart', [ProductController::class, 'addToCart'])->name('add.to.cart');
+
+Route::get('/cart', [CartController::class, 'index']);

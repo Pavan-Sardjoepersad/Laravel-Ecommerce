@@ -2,7 +2,7 @@
 @extends('components.layout')
 @section('content')
 
-{{-- Flash message when adding to cart --}}
+    {{-- Flash message when adding to cart --}}
     @if (session()->has('added'))
     
         <div 
@@ -103,6 +103,4 @@
 
 @endsection
     
-
     
-
