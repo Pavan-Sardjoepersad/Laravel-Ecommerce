@@ -74,7 +74,7 @@
                         <x-shopping-cart />
 
                     @else
-                        <div class="flex items-center gap-4">
+                        <div class="md:flex md:items-center">
                             <div class="sm:flex sm:gap-4">
                                 <a class="inline-block rounded border border-gray-900 bg-gray-900 px-10 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-gray-900 focus:outline-none focus:ring active:text-gray-900"
                                     href="/login">
@@ -91,7 +91,7 @@
 
                             <div class="block md:hidden">
                                 <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-6 mt-4" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M4 6h16M4 12h16M4 18h16" />
@@ -100,9 +100,9 @@
                             </div>
 
                             <!-- Shopping Cart Icon -->
-                            <div class="ml-6 h-screen flex justify-center items-center">
+                            <div class="ml-8 sm:flex sm:items-center h-screen flex justify-center items-center">
                                 <a href="/cart">
-                                            <div class="relative py-2">
+                                            <div class="relative py-2 right-4">
                                                 <div class="t-0 absolute left-3">
                                                     <p 
                                                         class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">

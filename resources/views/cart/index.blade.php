@@ -65,10 +65,10 @@
         <div class="relative">
           <input class="peer hidden" id="radio_1" type="radio" name="radio" checked />
           <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-          <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
-            <img class="w-14 object-contain" src="/images/naorrAeygcJzX0SyNI4Y0.png" alt="" />
+          <label class="focus:bg-blue-500 hover:bg-blue-500 hover:text-white peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
+            <img class="w-14 object-contain" src="/images/dhl-logo.png" alt="" />
             <div class="ml-5">
-              <span class="mt-2 font-semibold">Fedex Delivery</span>
+              <span class="mt-2 font-semibold">DHL Delivery</span>
               <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
             </div>
           </label>
@@ -76,8 +76,8 @@
         <div class="relative">
           <input class="peer hidden" id="radio_2" type="radio" name="radio" checked />
           <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-          <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">
-            <img class="w-14 object-contain" src="/images/oG8xsl3xsOkwkMsrLGKM4.png" alt="" />
+          <label class="hover:bg-blue-500 hover:text-white peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">
+            <img class="w-14 object-contain" src="/images/fedex-logo.png" alt="" />
             <div class="ml-5">
               <span class="mt-2 font-semibold">Fedex Delivery</span>
               <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
@@ -152,7 +152,9 @@
           <p class="text-2xl font-semibold text-gray-900">$408.00</p>
         </div>
       </div>
-      <button class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
+      <a href="/checkout">
+        <button class="hover:bg-gray-700 mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
+      </a>
     </div>
   </div>
   
