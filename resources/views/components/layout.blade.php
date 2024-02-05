@@ -74,14 +74,14 @@
                         <x-shopping-cart />
 
                     @else
-                        <div class="md:flex md:items-center">
+                        <div class="hidden  md:flex md:items-center">
                             <div class="sm:flex sm:gap-4">
                                 <a class="inline-block rounded border border-gray-900 bg-gray-900 px-10 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-gray-900 focus:outline-none focus:ring active:text-gray-900"
                                     href="/login">
                                     Login
                                 </a>
                                  
-                                <div class="hidden sm:flex">
+                                <div class="hidden md:flex">
                                     <a class="inline-block rounded border border-gray-900 px-10 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring active:bg-gray-900"
                                         href="/register">
                                         Register
@@ -89,7 +89,7 @@
                                 </div>
                             </div>
 
-                            <div class="block md:hidden">
+                            <div class="hidden ">
                                 <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-6 mt-4" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -100,7 +100,7 @@
                             </div>
 
                             <!-- Shopping Cart Icon -->
-                            <div class="ml-8 sm:flex sm:items-center h-screen flex justify-center items-center">
+                            <div class="ml-8 hidden md:flex sm:items-center h-screen flex justify-center items-center">
                                 <a href="/cart">
                                             <div class="relative py-2 right-4">
                                                 <div class="t-0 absolute left-3">

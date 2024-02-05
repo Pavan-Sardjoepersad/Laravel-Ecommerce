@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LogOutController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Models\Product;
@@ -35,3 +36,7 @@ Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth
 Route::get('/products/{slug}/cart', [ProductController::class, 'addToCart'])->name('add.to.cart');
 
 Route::get('/cart', [CartController::class, 'index']);
+
+Route::post('/payment/checkout', [PaymentController::class, 'checkout'] )->name('payment.checkout');
+Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
+Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
