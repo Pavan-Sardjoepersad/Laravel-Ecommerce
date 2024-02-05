@@ -1,4 +1,4 @@
-<div class="ml-6 h-screen flex justify-center items-center">
+<div class="ml-6 hidden md:flex h-screen flex justify-center items-center">
     <a href="/cart">
                 <div class="relative py-2">
                     <div class="t-0 absolute left-3">

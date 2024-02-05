@@ -81,6 +81,10 @@
                                 Log In
                             </button>
                         </div>
+
+                        <p class="mt-4 text-sm font-light text-gray-500 dark:text-gray-400">
+                            Back to <a href="/" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Home</a>
+                        </p>
                         
                         
                     
