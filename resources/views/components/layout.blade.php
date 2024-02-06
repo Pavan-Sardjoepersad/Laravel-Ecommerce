@@ -65,6 +65,32 @@
                                             </button>
                                         </div>
                                         <ul class="flex flex-col py-4">
+                                        @auth
+                                            <li>
+                                              <span class="text-sm flex ml-4 mb-4 font-medium">Hi, {{auth()->user()->name}}</span>
+                                            </li>
+
+                                            <li>
+                                                <a href="/cart" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                                                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-cart"></i></span>
+                                                <span class="text-sm font-medium">Cart</span>
+                                                <span class=" ml-4 mr-6 text-sm bg-red-100 rounded-full px-3 py-px text-red-500">
+                                                    {{ array_sum(array_column(session('cart', []), 'quantity')) }}
+                                                </span>
+                                                </a>
+                                            </li>
+                                            
+                                            <form action="/logout" method="POST" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                                                @csrf
+                                                <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
+
+                                                <button class="inline-block mr-4 text-sm font-medium text-red-500"
+                                                    type="submit" 
+                                                    href="/logout">Log Out
+                                                </button>
+                                            </form>
+
+                                        @else
                                         <li>
                                             <a href="/register" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
                                             <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-edit"></i></span>
@@ -86,13 +112,12 @@
                                             </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-                                            <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
-                                            <span class="text-sm font-medium">Logout</span>
-                                            </a>
-                                        </li>
+
+                                        @endauth
                                         </ul>
+                                        
+                                        
+
                                     </div>
                                     </div>
                 
@@ -134,7 +159,7 @@
 
                                 <form action="/logout" method="POST">
                                     @csrf
-                                    <button class="inline-block px-10 py-2 text-sm font-medium text-blue-500"
+                                    <button class="inline-block px-10 py-2 text-sm font-medium text-red-500"
                                         type="submit" 
                                         href="/logout">Log Out
                                     </button>

@@ -40,3 +40,5 @@ Route::get('/cart', [CartController::class, 'index']);
 Route::post('/payment/checkout', [PaymentController::class, 'checkout'] )->name('payment.checkout');
 Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
 Route::get('/payment/cancel', [PaymentController::class, 'cancel'])->name('payment.cancel');
+
+Route::post('/remove/{slug}', [ProductController::class, 'removeFromCart'])->name('remove.from.cart');

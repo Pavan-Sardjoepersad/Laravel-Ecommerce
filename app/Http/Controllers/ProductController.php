@@ -29,7 +29,8 @@ class ProductController extends Controller
                 'name' => $product->name,
                 'quantity' => 1,
                 'price' => $product->price,
-                'slug' => $product->slug
+                'slug' => $product->slug,
+                'id' => $product->id
             ];
         }
 
@@ -37,6 +38,18 @@ class ProductController extends Controller
         session()->put('cart', $cart);
         return redirect()->back()->with('added', 'Product added to the cart');
 
+    }
+
+    public function removeFromCart(Request $request, $id)
+    {
+        $cart = session()->get('cart', []);
+
+        unset($cart[$id]);
+
+        session()->put('cart', $cart);
+
+        return redirect()->back();
+    
     }
 
 }
