@@ -41,11 +41,11 @@
                             
                         </button>
 
-                        <div x-show="open" @click.away="open = false" class="fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity">
+                        <div x-show="open" @click.away="open = false" class="flex fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity">
                             
                             
 
-                            <div class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-800 transform translate-x-full overflow-y-auto transition-transform">
+                            <div class="fixed inset-y-0 right-0 z-50  bg-gray-800 transform overflow-y-auto transition-transform">
                                 <div class="min-h-screen flex flex-row bg-gray-100">
                                     <div class="flex flex-col w-56 bg-white rounded-r-3xl overflow-hidden">
                                         <div class="flex items-center justify-start h-20 shadow-md">
@@ -57,7 +57,7 @@
                                                 d="M11.988,5.382c-1.969,0-3.559,1.815-3.559,4.057s1.59,4.058,3.559,4.058 c1.968,0,3.562-1.816,3.562-4.058S13.956,5.382,11.988,5.382z">
                                             </path> <path style="fill:#030104;" d="M20.715,0.001H1.9c-1.05,0-1.9,0.85-1.9,1.898v18.815c0,1.051,0.85,1.898,1.9,1.898h18.814 c1.049,0,1.899-0.848,1.899-1.898V1.899C22.614,0.851,21.764,0.001,20.715,0.001z M11.988,14.839 c-1.459,0-2.761-0.757-3.621-1.946v5.627H7.063V4.273h1.304v1.828c0.86-1.188,2.162-1.946,3.621-1.946 c2.588,0,4.691,2.392,4.691,5.343C16.68,12.447,14.577,14.839,11.988,14.839z"></path> </g> </g> </g></svg>
                                             
-                                            <button @click="open = false" class="absolute top-0 right-0 m-4 text-black absolute right-20 focus:outline-none">
+                                            <button @click="open = false" class="absolute top-0 right-0 m-4 text-black focus:outline-none">
                                                 
                                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6">
                                                     <path d="M6 18L18 6M6 6l12 12"></path>
@@ -159,7 +159,7 @@
 
                                 <form action="/logout" method="POST">
                                     @csrf
-                                    <button class="inline-block px-10 py-2 text-sm font-medium text-red-500"
+                                    <button class="inline-block px-10 py-2 text-sm font-medium text-blue-500"
                                         type="submit" 
                                         href="/logout">Log Out
                                     </button>
