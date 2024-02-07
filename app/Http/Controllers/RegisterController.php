@@ -18,7 +18,7 @@ class RegisterController extends Controller
             'name' => ['min:3', 'max:255', 'required', ],
             'username' => ['min:3', 'max:255', 'required', Rule::unique('users','username')],
             'email' => ['min:3', 'max:255', 'email', 'required', Rule::unique('users','name')],
-            'password' => ['min:3', 'max:255', 'required', Rule::unique('users','username')],
+            'password' => ['min:6', 'max:255', 'required', Rule::unique('users','username')],
         ]);
 
         $user = User::create($attributes);

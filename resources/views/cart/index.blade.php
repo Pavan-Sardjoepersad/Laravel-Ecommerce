@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
-    <a href="#" class="text-2xl font-bold text-gray-800">Pavan SportsWear</a>
+    <a href="/" class="text-2xl font-bold text-gray-800">Pavan SportsWear</a>
 
     
   </div>
@@ -17,7 +17,7 @@
                 <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="/images/{{$item['slug']}}.png" alt="" />
                 <div class="flex w-full flex-col px-4 py-4">
                     <span class="font-semibold">{{$item['name']}}</span>
-                    <span class="float-right text-gray-400">42EU - 8.5US</span>
+                    {{-- <span class="float-right text-gray-400">42EU - 8.5US</span> --}}
                     <span class="float-right text-gray-400">Quantity: {{$item['quantity']}}</span>
                     <p class="text-lg font-bold">${{$item['price'] * $item['quantity']}}</p>
                     <!-- Form for removing the product -->
@@ -174,7 +174,7 @@
               </div>
 
               {{-- Payment Test Information --}}
-              {{-- <div id="alert-border-1" class=" flex items-center p-2 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
+              <div id="alert-border-1" class=" flex items-center p-2 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
                   
                 <div class="ml-2 ms-3 text-sm font-medium">
                   <p class="">
@@ -185,7 +185,7 @@
                   </p>
                   
                 </div>    
-              </div> --}}
+              </div>
 
               <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
               <div class="flex flex-col sm:flex-row">

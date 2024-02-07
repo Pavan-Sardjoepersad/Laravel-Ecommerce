@@ -65,7 +65,7 @@
                                 <span class="text-gray-600 dark:text-gray-300">In Stock</span>
                             </div>
                         </div>
-                        <div class="mb-4">
+                        {{-- <div class="mb-4">
                             <span class="font-bold text-gray-700 dark:text-gray-300">Select Color:</span>
                             <div class="flex items-center mt-2">
                                 <button class="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"></button>
@@ -73,15 +73,15 @@
                                 <button class="w-6 h-6 rounded-full bg-blue-500 dark:bg-blue-700 mr-2"></button>
                                 <button class="w-6 h-6 rounded-full bg-yellow-500 dark:bg-yellow-700 mr-2"></button>
                             </div>
-                        </div>
-                        <div class="mb-4">
+                        </div> --}}
+                        <div x-data="{ selectedSize: '' }" class="mb-4">
                             <span class="font-bold text-gray-700 dark:text-gray-300">Select Size:</span>
                             <div class="flex items-center mt-2">
-                                <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">S</button>
-                                <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">M</button>
-                                <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">L</button>
-                                <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XL</button>
-                                <button class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600">XXL</button>
+                                <button @click="selectedSize = 'S'" :class="{ 'bg-blue-500 text-white': selectedSize === 'S', 'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white': selectedSize !== 'S' }" class="py-2 px-4 rounded-full font-bold mr-2 ">S</button>
+                                <button @click="selectedSize = 'M'" :class="{ 'bg-blue-500 text-white': selectedSize === 'M', 'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white': selectedSize !== 'M' }" class="py-2 px-4 rounded-full font-bold mr-2 ">M</button>
+                                <button @click="selectedSize = 'L'" :class="{ 'bg-blue-500 text-white': selectedSize === 'L', 'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white': selectedSize !== 'L' }" class="py-2 px-4 rounded-full font-bold mr-2 ">L</button>
+                                <button @click="selectedSize = 'XL'" :class="{ 'bg-blue-500 text-white': selectedSize === 'XL', 'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white': selectedSize !== 'XL' }" class="py-2 px-4 rounded-full font-bold mr-2 ">XL</button>
+                                <button @click="selectedSize = 'XXL'" :class="{ 'bg-blue-500 text-white': selectedSize === 'XXL', 'bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white': selectedSize !== 'XXL' }" class="py-2 px-4 rounded-full font-bold mr-2 ">XXL</button>
                             </div>
                         </div>
                         <div>

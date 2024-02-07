@@ -93,7 +93,7 @@
                                 name="password" 
                                 id="password" 
                                 value="{{old('password')}}"
-                                placeholder="●●●●●●●"
+                                placeholder="●●●●●●"
                                 required
                             >
 
