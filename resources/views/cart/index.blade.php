@@ -51,7 +51,52 @@
   
       <p class="mt-8 text-lg font-medium">Shipping Methods</p>
       <form class="mt-5 grid gap-6">
-        <div class="relative">
+
+        <div class="flex flex-col space-y-4">
+          <input class="hidden" id="radio_1" type="radio" name="shipping_method" />
+          <label class="relative cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
+            <span class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex w-full">
+              <img class="w-14 object-contain" src="/images/dhl-logo.png" alt="" />
+              <div class="ml-5">
+                <span class="mt-2 font-semibold">DHL Delivery</span>
+                <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
+              </div>
+            </span>
+          </label>
+        
+          <input class="hidden" id="radio_2" type="radio" name="shipping_method" />
+          <label class="relative cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">
+            <span class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex w-full">
+              <img class="w-14 object-contain" src="/images/fedex-logo.png" alt="" />
+              <div class="ml-5">
+                <span class="mt-2 font-semibold">FedEx Delivery</span>
+                <p class="text-slate-500 text-sm leading-6">Delivery: 1-3 Days</p>
+              </div>
+            </span>
+          </label>
+        </div>
+        
+        <style>
+          #radio_1:checked + label {
+            background-color: #3b82f6; /* Blue background color */
+            color: #ffffff; /* White text color */
+            border-color: #2c5282; /* Darker blue border color */
+          }
+        
+          #radio_2:checked + label {
+            background-color: #3b82f6; /* Blue background color */
+            color: #ffffff; /* White text color */
+            border-color: #1d4ed8; /* Darker blue border color */
+          }
+        </style>
+
+        <p class="mt-2 text-sm font-light text-gray-500 dark:text-gray-400">
+          Back to <a href="/" class="font-medium text-black hover:underline dark:text-primary-500">Home</a>
+        </p>
+        
+        
+        
+        {{-- <div class="relative">
           <input class="peer hidden" id="radio_1" type="radio" name="radio" checked />
           <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
           <label class="focus:bg-blue-500 hover:bg-blue-500 hover:text-white peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
@@ -72,7 +117,7 @@
               <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
             </div>
           </label>
-        </div>
+        </div> --}}
       </form>
 
     </div>
@@ -129,7 +174,7 @@
               </div>
 
               {{-- Payment Test Information --}}
-              <div id="alert-border-1" class=" flex items-center p-2 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
+              {{-- <div id="alert-border-1" class=" flex items-center p-2 text-blue-800 border-t-4 border-blue-300 bg-blue-50 dark:text-blue-400 dark:bg-gray-800 dark:border-blue-800" role="alert">
                   
                 <div class="ml-2 ms-3 text-sm font-medium">
                   <p class="">
@@ -140,7 +185,7 @@
                   </p>
                   
                 </div>    
-              </div>
+              </div> --}}
 
               <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
               <div class="flex flex-col sm:flex-row">

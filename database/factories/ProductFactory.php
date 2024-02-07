@@ -18,15 +18,26 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         $products = [
-            'Nike Air MX Super',
-            'Adidas Originals',
-            'New Balance Sweater',
             'UnderArmour Cap',
+            'Nike Dunk Low Retro',
+            'New Balance Sweater',
+            'Adidas Originals',
+            'Chicago Bulls Tracksuit',
             'Asics Track Shoes',
+            'The North Face Fleece',
+            'Adidas Hoodie',
+            
+            
         ];
         
-        
-        $randomProduct = $products[rand(0, count($products) - 1)];
+        // to randomize products to be displayed
+        // $randomProduct = $products[rand(0, count($products) - 1)];
+
+        static $counter = 0;
+
+        // Select the item based on the counter variable
+        $randomProduct = isset($products[$counter]) ? $products[$counter] : null;
+        $counter++;
 
         return [
             'name' => $randomProduct,

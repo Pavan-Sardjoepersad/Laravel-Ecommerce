@@ -143,7 +143,7 @@
                             </li>
 
                             <li>
-                                <a class="text-gray-500 transition hover:text-blue-500" href="/">Categories
+                                <a class="text-gray-500 transition hover:text-blue-500" href="/">Contact
                                 </a>
                             </li>
                         </ul>
