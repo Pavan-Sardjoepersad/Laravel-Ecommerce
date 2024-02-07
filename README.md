@@ -1,13 +1,29 @@
-<h1>Laravel eCommerce Learning Project</h1>
+<h1>Laravel eCommerce Website</h1>
 
-<h2>Overview</h2>
+A Laravel-based ecommerce platform showcasing modern web development expertise. Using Laravel, Tailwind CSS, Alpine.js and MySQL, this project demonstrates:
 
-This project involves building an eCommerce website using Laravel. The main goal is to enhance my understanding of Laravel, improve database integration skills, and master Tailwind CSS for UI development.
+ 
 
-<h2>Learning Goals</h2> 
+ <img src="https://pavan-project.site/images/homepage.png" alt="Homepage Screenshot" width="600" height="350">
+ 
+ Visit the Website <a href="https://pavan-project.site">Here<a/> 🚀
 
-Laravel Mastery: Gain proficiency in Laravel's core features, including routing, controllers, and Eloquent ORM.
 
-Database Integration: Learn effective database design and interaction using Laravel's Eloquent ORM.
 
-Tailwind CSS Proficiency: Develop skills in Tailwind CSS for creating a visually appealing and responsive user interface.
+
+
+
+<ul>
+    <li>Dynamic product loading from MySQL</li>  
+    <li>Seamless authentication with user registration and login</li> 
+    <li>Flexible shopping cart functionality</li> 
+    <li>Stripe payment integration</li> 
+    <li>Modern frontend with Tailwind CSS and Alpine.js</li> 
+    <li>Docker deployment for consistency and scalability </li> 
+</ul>
+
+<h2></h2>
+<div>
+    
+[![My Skills](https://skillicons.dev/icons?i=laravel,html,css,php,mysql,tailwindcss,docker)](https://skillicons.dev)
+</div>
